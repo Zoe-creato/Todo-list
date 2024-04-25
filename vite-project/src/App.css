@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.todo{
+  background-image: url("./assets/bg-desktop-light.jpg");
+  height: 15rem;
+  width: 70rem;
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+body{
+  background-color: hsl(235, 44%, 10%)}
+   h1 {
+  margin-left: 23rem;
+  margin-top: 5px;
+  letter-spacing: 1rem;
+}
+.list{
+  margin-left: 15rem;
+  color:  hsl(234, 21%, 91%);
+  font-family: 'Courier New', Courier, monospace;
+}
