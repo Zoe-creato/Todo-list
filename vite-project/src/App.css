@@ -5,7 +5,7 @@
 
 .todo{
   background-image: url("./assets/bg-desktop-light.jpg");
-  height: 15rem;
+  height: 20rem;
   width: 70rem;
   margin-left: 4rem;
   margin-top: 1rem;
@@ -14,11 +14,19 @@ body{
   background-color: hsl(235, 44%, 10%)}
    h1 {
   margin-left: 23rem;
-  margin-top: 5px;
+  margin-top: 0px;
   letter-spacing: 1rem;
 }
 .list{
   margin-left: 15rem;
   color:  hsl(234, 21%, 91%);
-  font-family: 'Courier New', Courier, monospace;
-}
+  font-family: 'Courier New', Courier, monospace
+};
+
+  .btn {
+    margin: 10px;
+    font-size: 15px;
+    /* width: 20%; */
+    
+    }
+    

@@ -12,12 +12,10 @@ function App() {
     completed: " ",
    };
   const [todo, setTodo] =  useState(initialValue);
-  const [todolist, setTodolist] = useState ([ ]);
+  const todos = localStorage.getItem("todo");
+  const [todolist, setTodolist] = useState ( todos ? JSON.stringify:[]);
+      
   
-  //  const todo = localStorage.getItem("todos");
-  // const [todolist, setTodolist] = useState(todos ? JSON.parse(todo) : []); 
-// error message =  i cant redeclare  todo
-
   
 const handleChange = (event) => {
   const { name, value } = event.target;
@@ -42,16 +40,21 @@ const onAdd = (event) =>{
 }
   
   setTodolist((initialValue)=> [ initialValue, todo]);
+  localStorage.setItem("todos", JSON.stringify([...todolist, todo]));
+
 setTodo(initialValue);
+
+
 };
   return (
     <div>
     <div className="todo">
       <h1>T0DO</h1>
-      <Todoform onChange={handleChange}  todo={todo} onSubmit={onAdd} />
+      <Todoform onChange={handleChange}  todo={todo} onSubmit={onAdd}  />
+
       </div>
       <section className ="list">
-      <Todolist list ={todolist} />
+      <Todolist list ={todolist}  />
       </section>
   </div>)
 }

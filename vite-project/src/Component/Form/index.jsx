@@ -1,8 +1,10 @@
 
-
-import './Form.css';
+import "./Form.css"
 export const Todoform = ({onChange, todo, onSubmit }) => {
-
+  const handleClearTodos = () => {
+    localStorage.clear("todos");
+    setTodolist([]);
+  };
 
 return (
   <div>
@@ -37,8 +39,11 @@ return (
 
       </select>
     </div>
-    <button className='btn' type='submit'>Add task</button>
-    {/* <button >Clear Todos</button> */}
+   <div>
+   <button className='btn' type='submit'>Add task</button>
+    <button className="btn" onClick={handleClearTodos}>Clear Task</button>
+   </div>
+    
 
   </form>
   </div>
